@@ -7,74 +7,132 @@
   <title>New Client Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom TailwindCSS classes for input fields */
-    .input-field {
-      @apply border border-gray-300 rounded-md p-2 w-full;
+    /* TailwindCSS customizations for dark theme */
+    body {
+      @apply bg-gray-900 text-gray-100;
     }
-    .textarea-field {
-      @apply border border-gray-300 rounded-md p-2 w-full h-24;
+    .input-field, .textarea-field {
+      @apply border border-gray-600 rounded-md p-2 w-full bg-gray-800 text-gray-100;
     }
     .submit-button {
       @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600;
     }
+    .form-label {
+      @apply block text-lg font-medium text-gray-200 mb-1;
+    }
+    .container {
+      @apply mx-auto p-6 max-w-4xl bg-gray-800 rounded-lg shadow-lg mt-10;
+    }
   </style>
 </head>
-<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+<body>
 
-  <div class="container mx-auto mt-10">
-    <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-      <h1 class="text-3xl font-bold mb-6">New Client Information Form</h1>
-      <form action="https://formspree.io/f/xanwraoj" method="POST">
-        
-        <!-- Business Name -->
-        <div class="mb-4">
-          <label for="businessName" class="block text-lg font-medium text-gray-700">Business Name</label>
-          <input type="text" name="businessName" id="businessName" required class="input-field">
-        </div>
+  <div class="container">
+    <h1 class="text-3xl font-bold mb-6 text-center">New Client Information Form</h1>
+    <form action="https://formspree.io/f/xanwraoj" method="POST">
+      
+      <!-- Business Name -->
+      <div class="mb-4">
+        <label for="businessName" class="form-label">Business Name</label>
+        <input type="text" name="businessName" id="businessName" required class="input-field">
+      </div>
 
-        <!-- Primary Contact -->
-        <div class="mb-4">
-          <label for="contactPerson" class="block text-lg font-medium text-gray-700">Primary Contact Person</label>
-          <input type="text" name="contactPerson" id="contactPerson" required class="input-field">
-        </div>
+      <!-- Contact Person -->
+      <div class="mb-4">
+        <label for="contactPerson" class="form-label">Primary Contact Person</label>
+        <input type="text" name="contactPerson" id="contactPerson" required class="input-field">
+      </div>
 
-        <!-- Contact Email -->
-        <div class="mb-4">
-          <label for="contactEmail" class="block text-lg font-medium text-gray-700">Contact Email</label>
-          <input type="email" name="contactEmail" id="contactEmail" required class="input-field">
-        </div>
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="contactEmail" class="form-label">Contact Email</label>
+        <input type="email" name="contactEmail" id="contactEmail" required class="input-field">
+      </div>
 
-        <!-- Website URL -->
-        <div class="mb-4">
-          <label for="websiteUrl" class="block text-lg font-medium text-gray-700">Website URL</label>
-          <input type="url" name="websiteUrl" id="websiteUrl" required class="input-field">
-        </div>
+      <!-- Phone Number -->
+      <div class="mb-4">
+        <label for="phoneNumber" class="form-label">Phone Number</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" required class="input-field">
+      </div>
 
-        <!-- Project Deadline -->
-        <div class="mb-4">
-          <label for="deadline" class="block text-lg font-medium text-gray-700">Project Deadline</label>
-          <input type="date" name="deadline" id="deadline" class="input-field">
-        </div>
+      <!-- Project Description -->
+      <div class="mb-4">
+        <label for="projectDescription" class="form-label">Project Description</label>
+        <textarea name="projectDescription" id="projectDescription" required class="textarea-field"></textarea>
+      </div>
 
-        <!-- Project Budget -->
-        <div class="mb-4">
-          <label for="budget" class="block text-lg font-medium text-gray-700">Budget (USD)</label>
-          <input type="number" name="budget" id="budget" required class="input-field">
-        </div>
+      <!-- Deadline -->
+      <div class="mb-4">
+        <label for="deadline" class="form-label">Project Deadline</label>
+        <input type="date" name="deadline" id="deadline" class="input-field">
+      </div>
 
-        <!-- Project Description -->
-        <div class="mb-4">
-          <label for="projectDescription" class="block text-lg font-medium text-gray-700">Project Description</label>
-          <textarea name="projectDescription" id="projectDescription" class="textarea-field" required></textarea>
-        </div>
+      <!-- Budget -->
+      <div class="mb-4">
+        <label for="budget" class="form-label">Budget (USD)</label>
+        <input type="number" name="budget" id="budget" required class="input-field">
+      </div>
 
-        <!-- Submit Button -->
-        <div class="mt-6">
-          <button type="submit" class="submit-button w-full">Submit Form</button>
-        </div>
+      <!-- Current Website -->
+      <div class="mb-4">
+        <label for="websiteUrl" class="form-label">Current Website URL (if applicable)</label>
+        <input type="url" name="websiteUrl" id="websiteUrl" class="input-field">
+      </div>
 
-      </form>
-    </div>
+      <!-- Target Audience -->
+      <div class="mb-4">
+        <label for="targetAudience" class="form-label">Target Audience</label>
+        <textarea name="targetAudience" id="targetAudience" required class="textarea-field"></textarea>
+      </div>
+
+      <!-- Competitors -->
+      <div class="mb-4">
+        <label for="competitors" class="form-label">Competitors</label>
+        <textarea name="competitors" id="competitors" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Preferred Design Style -->
+      <div class="mb-4">
+        <label for="designStyle" class="form-label">Preferred Design Style</label>
+        <textarea name="designStyle" id="designStyle" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Required Features -->
+      <div class="mb-4">
+        <label for="features" class="form-label">Required Features (e.g., CMS, eCommerce, etc.)</label>
+        <textarea name="features" id="features" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Platform Preferences -->
+      <div class="mb-4">
+        <label for="platform" class="form-label">Platform Preferences (if any)</label>
+        <textarea name="platform" id="platform" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Content -->
+      <div class="mb-4">
+        <label for="content" class="form-label">Will you provide the content or should I create it?</label>
+        <textarea name="content" id="content" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Maintenance Plan -->
+      <div class="mb-4">
+        <label for="maintenance" class="form-label">Do you need a maintenance plan post-launch?</label>
+        <textarea name="maintenance" id="maintenance" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Additional Information -->
+      <div class="mb-4">
+        <label for="additionalInfo" class="form-label">Additional Information</label>
+        <textarea name="additionalInfo" id="additionalInfo" class="textarea-field"></textarea>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="mt-6">
+        <button type="submit" class="submit-button w-full">Submit Form</button>
+      </div>
+      
+    </form>
   </div>
 
 </body>
