@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>New Client Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom TailwindCSS classes for input fields */
+    .input-field {
+      @apply border border-gray-300 rounded-md p-2 w-full;
+    }
+    .textarea-field {
+      @apply border border-gray-300 rounded-md p-2 w-full h-24;
+    }
+    .submit-button {
+      @apply bg-blue-500 text-white font-bold py-2 px-4 rounded-md hover:bg-blue-600;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+  <div class="container mx-auto mt-10">
+    <div class="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+      <h1 class="text-3xl font-bold mb-6">New Client Information Form</h1>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        
+        <!-- Business Name -->
+        <div class="mb-4">
+          <label for="businessName" class="block text-lg font-medium text-gray-700">Business Name</label>
+          <input type="text" name="businessName" id="businessName" required class="input-field">
+        </div>
+
+        <!-- Primary Contact -->
+        <div class="mb-4">
+          <label for="contactPerson" class="block text-lg font-medium text-gray-700">Primary Contact Person</label>
+          <input type="text" name="contactPerson" id="contactPerson" required class="input-field">
+        </div>
+
+        <!-- Contact Email -->
+        <div class="mb-4">
+          <label for="contactEmail" class="block text-lg font-medium text-gray-700">Contact Email</label>
+          <input type="email" name="contactEmail" id="contactEmail" required class="input-field">
+        </div>
+
+        <!-- Website URL -->
+        <div class="mb-4">
+          <label for="websiteUrl" class="block text-lg font-medium text-gray-700">Website URL</label>
+          <input type="url" name="websiteUrl" id="websiteUrl" required class="input-field">
+        </div>
+
+        <!-- Project Deadline -->
+        <div class="mb-4">
+          <label for="deadline" class="block text-lg font-medium text-gray-700">Project Deadline</label>
+          <input type="date" name="deadline" id="deadline" class="input-field">
+        </div>
+
+        <!-- Project Budget -->
+        <div class="mb-4">
+          <label for="budget" class="block text-lg font-medium text-gray-700">Budget (USD)</label>
+          <input type="number" name="budget" id="budget" required class="input-field">
+        </div>
+
+        <!-- Project Description -->
+        <div class="mb-4">
+          <label for="projectDescription" class="block text-lg font-medium text-gray-700">Project Description</label>
+          <textarea name="projectDescription" id="projectDescription" class="textarea-field" required></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mt-6">
+          <button type="submit" class="submit-button w-full">Submit Form</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
