@@ -4,141 +4,120 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>New Client Form</title>
+  <title>New Client Intake Form</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    /* TailwindCSS customizations for dark theme */
     body {
-      @apply bg-gray-900 text-gray-100 font-sans;
       font-family: 'Poppins', sans-serif;
-    }
-    .input-field, .textarea-field {
-      @apply border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100;
-    }
-    .input-field:focus, .textarea-field:focus {
-      @apply outline-none ring-2 ring-blue-500;
-    }
-    .submit-button {
-      @apply bg-blue-600 text-white font-bold py-3 px-4 rounded-md w-full mt-4 hover:bg-blue-700 transition ease-in-out duration-200;
-    }
-    .form-label {
-      @apply block text-lg font-medium text-gray-200 mb-2;
-    }
-    .container {
-      @apply mx-auto p-8 max-w-3xl bg-gray-800 rounded-lg shadow-lg mt-10;
-      background: linear-gradient(to bottom, #1F2937, #111827);
-    }
-    h1 {
-      @apply text-4xl font-semibold mb-6 text-center text-gray-100;
     }
   </style>
 </head>
-<body>
+<body class="bg-gray-900 text-gray-100">
 
-  <div class="container">
-    <h1>New Client Information Form</h1>
+  <div class="container mx-auto p-8 max-w-3xl bg-gray-800 rounded-lg shadow-lg mt-10">
+    <h1 class="text-4xl font-semibold mb-6 text-center text-gray-100">New Client Information Form</h1>
     <form action="https://formspree.io/f/xanwraoj" method="POST">
       
       <!-- Business Name -->
       <div class="mb-4">
-        <label for="businessName" class="form-label">Business Name</label>
-        <input type="text" name="businessName" id="businessName" required class="input-field">
+        <label for="businessName" class="block text-lg font-medium text-gray-200 mb-2">Business Name</label>
+        <input type="text" name="businessName" id="businessName" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Contact Person -->
       <div class="mb-4">
-        <label for="contactPerson" class="form-label">Primary Contact Person</label>
-        <input type="text" name="contactPerson" id="contactPerson" required class="input-field">
+        <label for="contactPerson" class="block text-lg font-medium text-gray-200 mb-2">Primary Contact Person</label>
+        <input type="text" name="contactPerson" id="contactPerson" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Email -->
       <div class="mb-4">
-        <label for="contactEmail" class="form-label">Contact Email</label>
-        <input type="email" name="contactEmail" id="contactEmail" required class="input-field">
+        <label for="contactEmail" class="block text-lg font-medium text-gray-200 mb-2">Contact Email</label>
+        <input type="email" name="contactEmail" id="contactEmail" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Phone Number -->
       <div class="mb-4">
-        <label for="phoneNumber" class="form-label">Phone Number</label>
-        <input type="tel" name="phoneNumber" id="phoneNumber" required class="input-field">
+        <label for="phoneNumber" class="block text-lg font-medium text-gray-200 mb-2">Phone Number</label>
+        <input type="tel" name="phoneNumber" id="phoneNumber" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Project Description -->
       <div class="mb-4">
-        <label for="projectDescription" class="form-label">Project Description</label>
-        <textarea name="projectDescription" id="projectDescription" required class="textarea-field"></textarea>
+        <label for="projectDescription" class="block text-lg font-medium text-gray-200 mb-2">Project Description</label>
+        <textarea name="projectDescription" id="projectDescription" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Deadline -->
       <div class="mb-4">
-        <label for="deadline" class="form-label">Project Deadline</label>
-        <input type="date" name="deadline" id="deadline" class="input-field">
+        <label for="deadline" class="block text-lg font-medium text-gray-200 mb-2">Project Deadline</label>
+        <input type="date" name="deadline" id="deadline" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Budget -->
       <div class="mb-4">
-        <label for="budget" class="form-label">Budget (USD)</label>
-        <input type="number" name="budget" id="budget" required class="input-field">
+        <label for="budget" class="block text-lg font-medium text-gray-200 mb-2">Budget (USD)</label>
+        <input type="number" name="budget" id="budget" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Current Website -->
       <div class="mb-4">
-        <label for="websiteUrl" class="form-label">Current Website URL (if applicable)</label>
-        <input type="url" name="websiteUrl" id="websiteUrl" class="input-field">
+        <label for="websiteUrl" class="block text-lg font-medium text-gray-200 mb-2">Current Website URL (if applicable)</label>
+        <input type="url" name="websiteUrl" id="websiteUrl" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
       </div>
 
       <!-- Target Audience -->
       <div class="mb-4">
-        <label for="targetAudience" class="form-label">Target Audience</label>
-        <textarea name="targetAudience" id="targetAudience" required class="textarea-field"></textarea>
+        <label for="targetAudience" class="block text-lg font-medium text-gray-200 mb-2">Target Audience</label>
+        <textarea name="targetAudience" id="targetAudience" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Competitors -->
       <div class="mb-4">
-        <label for="competitors" class="form-label">Competitors</label>
-        <textarea name="competitors" id="competitors" class="textarea-field"></textarea>
+        <label for="competitors" class="block text-lg font-medium text-gray-200 mb-2">Competitors</label>
+        <textarea name="competitors" id="competitors" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Preferred Design Style -->
       <div class="mb-4">
-        <label for="designStyle" class="form-label">Preferred Design Style</label>
-        <textarea name="designStyle" id="designStyle" class="textarea-field"></textarea>
+        <label for="designStyle" class="block text-lg font-medium text-gray-200 mb-2">Preferred Design Style</label>
+        <textarea name="designStyle" id="designStyle" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Required Features -->
       <div class="mb-4">
-        <label for="features" class="form-label">Required Features (e.g., CMS, eCommerce, etc.)</label>
-        <textarea name="features" id="features" class="textarea-field"></textarea>
+        <label for="features" class="block text-lg font-medium text-gray-200 mb-2">Required Features (e.g., CMS, eCommerce, etc.)</label>
+        <textarea name="features" id="features" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Platform Preferences -->
       <div class="mb-4">
-        <label for="platform" class="form-label">Platform Preferences (if any)</label>
-        <textarea name="platform" id="platform" class="textarea-field"></textarea>
+        <label for="platform" class="block text-lg font-medium text-gray-200 mb-2">Platform Preferences (if any)</label>
+        <textarea name="platform" id="platform" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Content -->
       <div class="mb-4">
-        <label for="content" class="form-label">Will you provide the content or should I create it?</label>
-        <textarea name="content" id="content" class="textarea-field"></textarea>
+        <label for="content" class="block text-lg font-medium text-gray-200 mb-2">Will you provide the content or should I create it?</label>
+        <textarea name="content" id="content" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Maintenance Plan -->
       <div class="mb-4">
-        <label for="maintenance" class="form-label">Do you need a maintenance plan post-launch?</label>
-        <textarea name="maintenance" id="maintenance" class="textarea-field"></textarea>
+        <label for="maintenance" class="block text-lg font-medium text-gray-200 mb-2">Do you need a maintenance plan post-launch?</label>
+        <textarea name="maintenance" id="maintenance" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Additional Information -->
       <div class="mb-4">
-        <label for="additionalInfo" class="form-label">Additional Information</label>
-        <textarea name="additionalInfo" id="additionalInfo" class="textarea-field"></textarea>
+        <label for="additionalInfo" class="block text-lg font-medium text-gray-200 mb-2">Additional Information</label>
+        <textarea name="additionalInfo" id="additionalInfo" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
       </div>
 
       <!-- Submit Button -->
       <div class="mt-6">
-        <button type="submit" class="submit-button">Submit Form</button>
+        <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-4 rounded-md w-full hover:bg-blue-700 transition ease-in-out duration-200">Submit Form</button>
       </div>
       
     </form>
