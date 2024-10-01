@@ -13,115 +13,159 @@
     }
   </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body class="bg-gray-900 text-white">
 
   <div class="container mx-auto p-8 max-w-3xl bg-gray-800 rounded-lg shadow-lg mt-10">
-    <h1 class="text-4xl font-semibold mb-6 text-center text-gray-100">New Client Information Form</h1>
+    <h1 class="text-4xl font-semibold mb-6 text-center text-white">New Client Information Form</h1>
     <form action="https://formspree.io/f/xanwraoj" method="POST">
       
-      <!-- Business Name -->
-      <div class="mb-4">
-        <label for="businessName" class="block text-lg font-medium text-gray-200 mb-2">Business Name</label>
-        <input type="text" name="businessName" id="businessName" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
+                  <!-- General Information Section -->
+                  <h2 class="text-xl font-semibold mt-8">General Information:</h2>
+                  <p class="text-white mb-2">Provide basic information about your business.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="businessName">What is your business name, and do you have a tagline or slogan?</label>
+                      <input type="text" id="businessName" name="businessName" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black" required>
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="contactPerson">Who is the primary point of contact for this project, and what is the best way to reach them?</label>
+                      <input type="text" id="contactPerson" name="contactPerson" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black" required>
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="currentWebsite">Do you have a current website? If yes, what is the URL, and what do you like/dislike about it?</label>
+                      <input type="url" id="currentWebsite" name="currentWebsite" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                      <small class="text-gray-400">If you don't have a website yet, feel free to leave this blank.</small>
 
-      <!-- Contact Person -->
-      <div class="mb-4">
-        <label for="contactPerson" class="block text-lg font-medium text-gray-200 mb-2">Primary Contact Person</label>
-        <input type="text" name="contactPerson" id="contactPerson" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Email -->
-      <div class="mb-4">
-        <label for="contactEmail" class="block text-lg font-medium text-gray-200 mb-2">Contact Email</label>
-        <input type="email" name="contactEmail" id="contactEmail" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Phone Number -->
-      <div class="mb-4">
-        <label for="phoneNumber" class="block text-lg font-medium text-gray-200 mb-2">Phone Number</label>
-        <input type="tel" name="phoneNumber" id="phoneNumber" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Project Description -->
-      <div class="mb-4">
-        <label for="projectDescription" class="block text-lg font-medium text-gray-200 mb-2">Project Description</label>
-        <textarea name="projectDescription" id="projectDescription" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Deadline -->
-      <div class="mb-4">
-        <label for="deadline" class="block text-lg font-medium text-gray-200 mb-2">Project Deadline</label>
-        <input type="date" name="deadline" id="deadline" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Budget -->
-      <div class="mb-4">
-        <label for="budget" class="block text-lg font-medium text-gray-200 mb-2">Budget (USD)</label>
-        <input type="number" name="budget" id="budget" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Current Website -->
-      <div class="mb-4">
-        <label for="websiteUrl" class="block text-lg font-medium text-gray-200 mb-2">Current Website URL (if applicable)</label>
-        <input type="url" name="websiteUrl" id="websiteUrl" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500">
-      </div>
-
-      <!-- Target Audience -->
-      <div class="mb-4">
-        <label for="targetAudience" class="block text-lg font-medium text-gray-200 mb-2">Target Audience</label>
-        <textarea name="targetAudience" id="targetAudience" required class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Competitors -->
-      <div class="mb-4">
-        <label for="competitors" class="block text-lg font-medium text-gray-200 mb-2">Competitors</label>
-        <textarea name="competitors" id="competitors" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Preferred Design Style -->
-      <div class="mb-4">
-        <label for="designStyle" class="block text-lg font-medium text-gray-200 mb-2">Preferred Design Style</label>
-        <textarea name="designStyle" id="designStyle" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Required Features -->
-      <div class="mb-4">
-        <label for="features" class="block text-lg font-medium text-gray-200 mb-2">Required Features (e.g., CMS, eCommerce, etc.)</label>
-        <textarea name="features" id="features" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Platform Preferences -->
-      <div class="mb-4">
-        <label for="platform" class="block text-lg font-medium text-gray-200 mb-2">Platform Preferences (if any)</label>
-        <textarea name="platform" id="platform" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Content -->
-      <div class="mb-4">
-        <label for="content" class="block text-lg font-medium text-gray-200 mb-2">Will you provide the content or should I create it?</label>
-        <textarea name="content" id="content" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Maintenance Plan -->
-      <div class="mb-4">
-        <label for="maintenance" class="block text-lg font-medium text-gray-200 mb-2">Do you need a maintenance plan post-launch?</label>
-        <textarea name="maintenance" id="maintenance" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Additional Information -->
-      <div class="mb-4">
-        <label for="additionalInfo" class="block text-lg font-medium text-gray-200 mb-2">Additional Information</label>
-        <textarea name="additionalInfo" id="additionalInfo" class="border border-gray-700 rounded-md p-3 w-full bg-gray-800 text-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="mt-6">
-        <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-4 rounded-md w-full hover:bg-blue-700 transition ease-in-out duration-200">Submit Form</button>
-      </div>
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="projectDeadline">Do you have a deadline or timeframe for this project?</label>
+                      <input type="text" id="projectDeadline" name="projectDeadline" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="budget">What is your budget range for the project?</label>
+                      <input type="text" id="budget" name="budget" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
       
+                  <!-- Business & Audience Section -->
+                  <h2 class="text-xl font-semibold mt-8">Business & Audience:</h2>
+                  <p class="text-white mb-8">Tell us more about your target market and business goals.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="websiteGoal">What is the primary goal of your website (e.g., sell products, generate leads, provide information)?</label>
+                      <input type="text" id="websiteGoal" name="websiteGoal" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black" required>
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="targetAudience">Who is your target audience? (Demographics, interests, etc.)</label>
+                      <input type="text" id="targetAudience" name="targetAudience" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black" required>
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="uniqueValue">What makes your business unique compared to competitors?</label>
+                      <input type="text" id="uniqueValue" name="uniqueValue" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="inspirations">Are there any brands or websites that inspire you or align with your vision?</label>
+                      <input type="text" id="inspirations" name="inspirations" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Website Content Section -->
+                  <h2 class="text-xl font-semibold mt-8">Website Content:</h2>
+                  <p class="text-white mb-8">Let us know your content needs and preferences.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="provideContent">Will you provide all the content (text, images, videos, etc.) for the website?</label>
+                      <input type="text" id="provideContent" name="provideContent" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="contentAssistance">Do you need assistance with content creation (e.g., copywriting, photography, videography)?</label>
+                      <input type="text" id="contentAssistance" name="contentAssistance" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="multiLanguage">Do you need your website to support multiple languages? If so, which ones?</label>
+                      <input type="text" id="multiLanguage" name="multiLanguage" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Branding & Design Section -->
+                  <h2 class="text-xl font-semibold mt-8">Branding & Design:</h2>
+                  <p class="text-white mb-8">Share your design preferences and branding details.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="brandIdentity">Do you have an existing brand identity (logo, colors, fonts)? If yes, please provide those assets.</label>
+                      <input type="text" id="brandIdentity" name="brandIdentity" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="designStyles">Are there specific design styles you prefer or want to avoid?</label>
+                      <input type="text" id="designStyles" name="designStyles" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="functionality">Do you have any specific functionality or features you’d like to include (e.g., e-commerce, contact forms, booking systems)?</label>
+                      <input type="text" id="functionality" name="functionality" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Technical Requirements Section -->
+                  <h2 class="text-xl font-semibold mt-8">Technical Requirements:</h2>
+                  <p class="text-white mb-8">Outline your technical needs for the website.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="domainHelp">Do you need help registering a domain or setting up hosting?</label>
+                      <input type="text" id="domainHelp" name="domainHelp" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="maintenance">Will you need ongoing website maintenance after launch?</label>
+                      <input type="text" id="maintenance" name="maintenance" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="integrations">Do you require any integrations (e.g., CRM, email marketing, social media, payment gateways)?</label>
+                      <input type="text" id="integrations" name="integrations" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="userAccounts">Will your site require user accounts, member areas, or gated content?</label>
+                      <input type="text" id="userAccounts" name="userAccounts" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- SEO & Marketing Section -->
+                  <h2 class="text-xl font-semibold mt-8">SEO & Marketing:</h2>
+                  <p class="text-white mb-8">Discuss your marketing strategies and SEO plans.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="seoStrategies">Do you have any SEO strategies in place, or will you need SEO services?</label>
+                      <input type="text" id="seoStrategies" name="seoStrategies" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="targetKeywords">Are there specific keywords or phrases you want to target?</label>
+                      <input type="text" id="targetKeywords" name="targetKeywords" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="analyticsSetup">Will you need help setting up analytics or tracking tools (e.g., Google Analytics)?</label>
+                      <input type="text" id="analyticsSetup" name="analyticsSetup" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Legal & Compliance Section -->
+                  <h2 class="text-xl font-semibold mt-8">Legal & Compliance:</h2>
+                  <p class="text-white mb-8">Identify any legal or compliance needs for your website.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="legalGuidelines">Does your website need to adhere to specific legal guidelines (e.g., GDPR, ADA compliance)?</label>
+                      <input type="text" id="legalGuidelines" name="legalGuidelines" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="legalPages">Will you need a privacy policy, terms of service, or other legal pages?</label>
+                      <input type="text" id="legalPages" name="legalPages" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Future Plans Section -->
+                  <h2 class="text-xl font-semibold mt-8">Future Plans:</h2>
+                  <p class="text-white mb-8">Share your vision for the future of your website.</p>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="futureScalability">Do you plan to scale or add new features to your site in the future?</label>
+                      <input type="text" id="futureScalability" name="futureScalability" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+                  <div class="mb-4">
+                      <label class="block text-white text-sm font-bold mb-2" for="contentUpdates">How often do you plan to update content, and do you want the ability to manage updates yourself?</label>
+                      <input type="text" id="contentUpdates" name="contentUpdates" class="border border-gray-300 rounded p-2 w-full bg-off-white text-black">
+                  </div>
+      
+                  <!-- Submit Button -->
+                  <div class="flex items-center justify-between mt-6">
+                      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                          Submit
+                      </button>
+                  </div>
     </form>
   </div>
 
 </body>
 </html>
+
